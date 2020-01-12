@@ -6,7 +6,19 @@ public class _00_SortedArrayChecker {
 	//   and it returns a boolean.
 	//   The method returns true if the integer
 	//   array is in ascending order and false otherwise
-
+	int ii;
+	boolean intArraySorted (int[] arr) {
+		for (int i = 0; i < arr.length-1; i++) {
+			ii+= 1;
+			if(arr[i]>arr[ii]) {
+				return false;
+			}
+		
+		}
+		return false;
+		
+		
+	}
 	
 	//2. Write a static method called doubleArraySorted. 
 	//   This method takes in an array of doubles
