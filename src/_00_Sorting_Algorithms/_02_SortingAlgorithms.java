@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  * HeapSorter
  * BogoSorter
  */
-
+ 
 public class _02_SortingAlgorithms {
 	public static void main(String[] args) {
 		String[] options = new String[] {"Bogo", "Heap", "Merge", "Quick","Insertion","Selection", "Bubble"};
