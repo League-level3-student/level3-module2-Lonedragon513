@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * QuickSorter
  * MergeSorter
  * HeapSorter
- * BogoSorter
+ * BogoSorter 
  */
  
 public class _02_SortingAlgorithms {
