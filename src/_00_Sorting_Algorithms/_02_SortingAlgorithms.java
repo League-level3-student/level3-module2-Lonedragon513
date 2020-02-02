@@ -24,7 +24,7 @@ public class _02_SortingAlgorithms {
 		
 		String choice = options[input];
 		
-		switch(choice) {
+		switch(choice) { 
 		case "Bubble":{
 			new SortingVisualizer(new BubbleSorter());
 			break;
