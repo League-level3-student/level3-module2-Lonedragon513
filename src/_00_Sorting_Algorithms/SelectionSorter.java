@@ -21,6 +21,8 @@ public class SelectionSorter extends Sorter {
 			int e = array[i];
 			array[i]=array[index];
 			array[index]=e;
+			display.updateDisplay();
+
 			
 			}
 		}

@@ -15,17 +15,26 @@ public class HeapSorter extends Sorter {
 	void sort(int[] array, SortingVisualizer display) {
 		// 8. create an integer called n and set it equal
 		// to the length of the array
-
+		int n = array.length;
+		
 		// 9. make a for loop that starts half way between
 		// 0 and n and counts down until it is less than 0.
 		// Inside this for loop, call the heapSort method with n and i
-
+		for (int i = n/2; i >= 0 ; i--) {
+			heapSort(array, n, i , display);
+		}
 		// 10. make a for loop that starts at n-1
 		// and counts down until it is less than 0.
+		for (int i = n-1; i >= 0 ; i--) {
+			int x =array[0];
+		array[0]=array[i];
+		array[i]=x;
+		
+		heapSort(array, i, 0 , display);
 
+		}
 		// 11. swap the array elements at 0 and i.
-
-		// 12. call the heapSort method with i and 0
+				// 12. call the heapSort method with i and 0
 
 	}
 
@@ -39,14 +48,23 @@ public class HeapSorter extends Sorter {
 		// 5. if l is less than n
 		// and array element at l is greater than array element at largest
 		// then set largest equal to l
-if(l<n&&array[l]>array[array.length-1]) array[array.length-1]=array[l];display.updateDisplay();
+		if(l<n&&array[l]>array[lar]) lar=l;
 		// 6. if r is less than n
 		// and array element at r is greater than array element at largest
 		// then set largest equal to r
-
+		if (r<n&&array[r]>array[lar]) lar = r;
 		// 7. if largest is not equal to i
 		// then swap the array elements at i and largest.
 		// Also, call the heapSort method with n and largest
-	}
+	
 
+		if (lar!= i) {
+			int x =array[lar];
+			array[lar]=array[i];
+			array[i]=x;
+			heapSort (array,n,lar, display);
+			
+		}
+		display.updateDisplay();
+		}
 }
