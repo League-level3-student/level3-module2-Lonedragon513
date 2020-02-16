@@ -18,6 +18,9 @@ public class _00_MoreAndMoreTests {
 //	    assertEquals("8 x 11 = 88", multiply(8, 11));
 //	  }
 //
+	String multiply(int num, int numb) {
+		return num+" x "+numb+" = "+ numb*num;
+	}
 //	@Test
 //	  public void PrimeTest() {
 //
@@ -29,6 +32,13 @@ public class _00_MoreAndMoreTests {
 //	    assertFalse(isPrime(527));
 //
 //	  }
+	boolean isPrime (int num){
+		for (int i = 2; i < num; i++) {
+			if (num%i==0)return false;
+		}
+		return true;	
+		
+	}
 //
 //	@Test
 //	  public void SquareTest() {
