@@ -39,7 +39,7 @@ public class _00_MoreAndMoreTests {
 		return true;	
 		
 	}
-//
+
 //	@Test
 //	  public void SquareTest() {
 //
@@ -53,19 +53,33 @@ public class _00_MoreAndMoreTests {
 //	    assertFalse(isSquare(143));
 //
 //	  }
-//
-//	@Test
-//	  public void CubeTest() {
-//
-//	    assertTrue(isCube(27));
-//	    assertTrue(isCube(216));
-//	    assertTrue(isCube(729));
-//	    assertTrue(isCube(1));
-//	    assertFalse(isCube(3));
-//	    assertFalse(isCube(22));
-//	    assertFalse(isCube(143));
-//
-//	  }
+	boolean isSquare (int u) {
+		for (int i = 0; i < Math.sqrt(u)+1.2; i++) {
+			if (i*i==u)return true;
+		}
+		return false;
+	}
+	
+
+	@Test
+	  public void CubeTest() {
+
+	    assertTrue(isCube(27));
+	    assertTrue(isCube(216));
+	    assertTrue(isCube(729));
+	    assertTrue(isCube(1));
+	    assertFalse(isCube(3));
+	    assertFalse(isCube(22));
+	    assertFalse(isCube(143));
+
+	  }
+	boolean isCube (int u) {
+		for (int i = 0; i < Math.pow(u, 1.0/3.0)+1; i++) {
+			if (Math.pow(i, 3.0)==u)return true;
+		}
+		return false;
+	}
+	
 
 
 
