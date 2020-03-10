@@ -72,13 +72,35 @@ public class Algorithms {
 		}
 		return c;
 	}
-
+	// -
 	public static Object sortDNA(List<String> e) {
 		// TODO Auto-generated method stub
-		    for (int i = 0; i < e.size(); i++) {
-				
+		for (int i1 = 0; i1 <2; i1++) {
+			
+		
+		    for (int i = 0; i < e.size()-1; i++) {
+				if (e.get(i).length()>e.get(i+1).length()) {
+					String r = e.get(i);
+					e.set(i, e.get(i+1));
+					e.set(i+1, r);
+					i=0;
+				}
+			}}
+		    
+		return e;
+	}
+
+	public static List<String> sortWords(List<String> e) {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < e.size()-1; i++) {
+			if (e.get(i).compareTo(e.get(1+1))>0) {
+				String r = e.get(i);
+				e.set(i, e.get(i+1));
+				e.set(i+1, r);
+				i=0;
 			}
-		return null;
+		}System.out.println(e);
+		return e;
 	}
 	
 	
